@@ -4,10 +4,11 @@ the workflow processes raw sensor data, identifies specific drills, analyzes the
 ## Main workflow:
 1. Data Loading and Parsing : parse_event_file function is used to read raw data from a .event file.
 2. Drill Structuring: A dictionary (drills_for_analysis) is built to store key information for each drill, such as the start and end timestamps.
-3. Identifying Presentation Trajectory and Key Timestamps:For each identified drill, the workflow aims to find the specific portion of the trajectory data  that corresponds to the weapon "presentation".
-4. Calculating Presentation Metrics:  various metrics are calculated: speed, motion length, reaction time, curve shape.
+4. Identifying Presentation Trajectory and Key Timestamps:For each identified drill, the workflow aims to find the specific portion of the trajectory data  that corresponds to the weapon "presentation".
+5. option for hyperparmeter tuning.
+6. Calculating Presentation Metrics:  various metrics are calculated: speed, motion length, reaction time, curve shape.
     curve shape of the trajectory is classified using either classify_presentation_curve (deviation-based) or classify_presentation_curve_polynomial_fit (fit-based).
-5. Visualization, Reporting and exploratory data analysis.
+7. Visualization, Reporting and exploratory data analysis.
    
 ## Functions:
 ### parse_event_file(file_path):
